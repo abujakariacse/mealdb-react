@@ -1,0 +1,19 @@
+nav{
+    background-color: #d70f64;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 144px;
+    height: 80px;
+}
+nav a{
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+    margin-right: 36px;
+}
+.logo img{
+    width: 140px;
+    
+}

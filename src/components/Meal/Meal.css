@@ -1,0 +1,16 @@
+.meal{
+    height: 500px;
+    border-radius: 10px;
+    box-shadow: 5px 10px 20px gray;
+}
+.foodimg{
+    width: 300px;
+    border-radius: 5px;
+}
+.meal h4,p{
+    margin: 0;
+    padding:0 10px;
+}
+.meal h4{
+    margin: 15px 0;
+}
