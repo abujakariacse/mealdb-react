@@ -9,15 +9,19 @@ const Meals = () => {
         .then(res=>res.json())
         .then(data=>setMeals(data.meals))
     },[])
+    const addToCart = (props) =>{
+        console.log(props)
+    };
     return (
         <div className='shop-container'>
             <div className="product-container">
                 {
-                    meals.map(meal=><Meal meal={meal} key={meal.idMeal}></Meal>)
+                    meals.map(meal=><Meal meal={meal} key={meal.idMeal} addToCart = {addToCart}></Meal>)
                 }
             </div>
             <div className="cart-container">
-                <h1>This is a cart</h1>
+                <h3>Order Summery</h3>
+                <h4>Total Order: </h4>
             </div>
         </div>
     );
