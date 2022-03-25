@@ -1,16 +1,19 @@
 import React, { useEffect, useState } from 'react';
+import Cart from '../Cart/Cart';
 import Meal from '../Meal/Meal';
 import './Meals.css'
 
 const Meals = () => {
     const [meals, setMeals] = useState([]);
+    const [cart,setCart] = useState([]);
     useEffect(()=>{
         fetch('https://www.themealdb.com/api/json/v1/1/search.php?s=a')
         .then(res=>res.json())
         .then(data=>setMeals(data.meals))
     },[])
-    const addToCart = (props) =>{
-        console.log(props)
+    const addToCart = (meal) =>{
+        const newCart= [...cart,meal]
+        setCart(newCart)
     };
     return (
         <div className='shop-container'>
@@ -21,7 +24,7 @@ const Meals = () => {
             </div>
             <div className="cart-container">
                 <h3>Order Summery</h3>
-                <h4>Total Order: </h4>
+                <Cart cart={cart}></Cart>
             </div>
         </div>
     );
