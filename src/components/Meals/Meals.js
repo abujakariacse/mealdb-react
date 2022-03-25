@@ -23,7 +23,6 @@ const Meals = () => {
                 }
             </div>
             <div className="cart-container">
-                <h3>Order Summery</h3>
                 <Cart cart={cart}></Cart>
             </div>
         </div>
